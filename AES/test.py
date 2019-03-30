@@ -1,4 +1,4 @@
-__author__ = 'yousefhamza'
+__author__ = 'Rishi&Pratham'
 
 import unittest
 from aes import AES
@@ -9,7 +9,7 @@ class AES_TEST(unittest.TestCase):
         self.AES = AES(master_key)
 
     def test_encryption(self):
-        plaintext = 0x3243f6a8885a308d313198a2e0370734
+        plaintext = "Hi! Simple implementation of AES!"
         encrypted = self.AES.encrypt(plaintext)
 
         self.assertEqual(encrypted, 0x3925841d02dc09fbdc118597196a0b32)
@@ -18,7 +18,7 @@ class AES_TEST(unittest.TestCase):
         ciphertext = 0x3925841d02dc09fbdc118597196a0b32
         decrypted = self.AES.decrypt(ciphertext)
 
-        self.assertEqual(decrypted, 0x3243f6a8885a308d313198a2e0370734)
+        self.assertEqual(decrypted, "Hi! Simple implementation of AES!")
 
 if __name__ == '__main__':
     unittest.main()
