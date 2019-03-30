@@ -1,0 +1,175 @@
+@import url(//fonts.googleapis.com/css?family=Raleway:400,600);
+/* line 5, ../sass/style.sass */
+body {
+  font-family: Raleway;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 10, ../sass/style.sass */
+.wrapper {
+  height: 100vh;
+  border: 1px solid #ddd;
+  background-color: rgba(250, 250, 253, 0.8);
+  padding: 0px 20px;
+  padding-top: 90px;
+}
+
+/* line 16, ../sass/style.sass */
+.navbar {
+  background-color: #FFCC00;
+  height: 70px;
+}
+/* line 19, ../sass/style.sass */
+.navbar .navbar-brand {
+  color: white;
+  text-shadow: 1px 1px 1px rgba(85, 85, 85, 0.5);
+}
+/* line 22, ../sass/style.sass */
+.navbar .navbar-brand small {
+  font-size: 80%;
+}
+/* line 24, ../sass/style.sass */
+.navbar .navbar-brand .label {
+  margin-left: 5px;
+}
+/* line 26, ../sass/style.sass */
+.navbar .navbar-nav {
+  margin-top: 0px;
+}
+/* line 28, ../sass/style.sass */
+.navbar .navbar-nav > li {
+  float: left;
+  border-left: 1px solid #e6b800;
+}
+/* line 31, ../sass/style.sass */
+.navbar .navbar-nav > li > a {
+  padding: 24px 20px;
+  color: white;
+  font-size: 18px;
+  line-height: 20px;
+}
+/* line 36, ../sass/style.sass */
+.navbar .navbar-nav > li > a:hover {
+  background-color: #ffd11a;
+}
+/* line 38, ../sass/style.sass */
+.navbar .navbar-right {
+  margin-right: 0px;
+  float: right;
+}
+/* line 41, ../sass/style.sass */
+.navbar .request-details {
+  display: inline-block;
+  margin-top: 5px;
+  max-width: 230px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* line 49, ../sass/style.sass */
+.inline-block {
+  display: inline-block;
+}
+
+/* line 51, ../sass/style.sass */
+.well {
+  background-color: white;
+}
+
+/* line 53, ../sass/style.sass */
+.form-login {
+  margin-top: 18px;
+}
+
+/* line 56, ../sass/style.sass */
+.form-chat-input > div {
+  display: flex;
+}
+/* line 58, ../sass/style.sass */
+.form-chat-input > div input, .form-chat-input > div button {
+  display: inline-block;
+}
+/* line 60, ../sass/style.sass */
+.form-chat-input > div input {
+  flex: 1;
+}
+/* line 62, ../sass/style.sass */
+.form-chat-input > div input + button.form-control {
+  width: 40px;
+}
+
+/* line 65, ../sass/style.sass */
+.chat-messages {
+  overflow-y: scroll;
+}
+/* line 67, ../sass/style.sass */
+.chat-messages .left {
+  text-align: left;
+}
+/* line 69, ../sass/style.sass */
+.chat-messages .left .chat-user {
+  order: 0;
+  margin-right: 10px;
+}
+/* line 72, ../sass/style.sass */
+.chat-messages .left .chat-text {
+  order: 1;
+  margin-right: 50px;
+}
+/* line 76, ../sass/style.sass */
+.chat-messages .right {
+  text-align: right;
+}
+/* line 78, ../sass/style.sass */
+.chat-messages .right .chat-user {
+  order: 1;
+  margin-left: 10px;
+}
+/* line 81, ../sass/style.sass */
+.chat-messages .right .chat-user > div {
+  background-color: rgba(255, 204, 0, 0.5);
+}
+/* line 83, ../sass/style.sass */
+.chat-messages .right .chat-text {
+  order: 0;
+  margin-left: 50px;
+}
+/* line 87, ../sass/style.sass */
+.chat-messages .chat-message {
+  display: flex;
+}
+/* line 89, ../sass/style.sass */
+.chat-messages .chat-text {
+  flex: 1;
+}
+/* line 92, ../sass/style.sass */
+.chat-messages .chat-user > div {
+  display: inline-block;
+  font-weight: bold;
+  width: 40px;
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #eaeaea;
+}
+
+/* line 101, ../sass/style.sass */
+.chat {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+}
+/* line 109, ../sass/style.sass */
+.chat .chat-messages {
+  flex: 1;
+}
+/* line 111, ../sass/style.sass */
+.chat .chat-input {
+  margin-bottom: 20px;
+}

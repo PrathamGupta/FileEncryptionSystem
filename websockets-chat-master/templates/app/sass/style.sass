@@ -1,0 +1,113 @@
+@import url(//fonts.googleapis.com/css?family=Raleway:400,600)
+$space: 20px
+$color-primary: #FFCC00
+
+body
+  font-family: Raleway
+  margin: 0px
+  padding: 0px
+
+.wrapper
+  height: 100vh
+  border: 1px solid #ddd
+  background-color: rgba(250,250,253,0.8)
+  padding: 0px $space
+  padding-top: 90px
+.navbar
+  background-color: $color-primary
+  height: 70px
+  .navbar-brand
+    color: white
+    text-shadow: 1px 1px 1px rgba(#555,0.5)
+    small 
+      font-size: 80%
+    .label 
+      margin-left: 5px
+  .navbar-nav 
+    margin-top: 0px
+    > li 
+      float: left
+      border-left: 1px solid darken($color-primary, 5%)
+      > a 
+        padding: 24px 20px
+        color: white
+        font-size: 18px
+        line-height: 20px
+        &:hover 
+          background-color: lighten($color-primary, 5%)
+  .navbar-right
+    margin-right: 0px
+    float: right
+  .request-details 
+    display: inline-block
+    margin-top: 5px
+    max-width: 230px
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+    
+.inline-block
+  display: inline-block
+.well 
+  background-color: white
+.form-login
+  margin-top: 18px
+.form-chat-input
+  > div 
+    display: flex
+    input,button
+      display: inline-block
+    input
+      flex: 1
+    input + button.form-control
+      width: 40px
+      
+.chat-messages
+  overflow-y: scroll
+  .left
+    text-align: left
+    .chat-user
+      order: 0
+      margin-right: $space/2
+    .chat-text
+      order: 1
+      margin-right: $space*2.5
+      
+  .right
+    text-align: right
+    .chat-user
+      order: 1
+      margin-left: $space/2
+      > div
+        background-color: rgba($color-primary, 0.5)
+    .chat-text
+      order: 0
+      margin-left: $space*2.5
+      
+  .chat-message
+    display: flex
+  .chat-text
+    flex: 1
+  .chat-user
+    > div
+      display: inline-block
+      font-weight: bold
+      width: $space*2
+      text-align: center
+      border-radius: $space
+      padding: $space/2
+      background-color: #eaeaea
+ 
+.chat 
+  height: 100%
+  display: flex
+  flex-direction: column
+  position: relative
+  top: 0px
+  bottom: 0px  
+  width: 100%
+  .chat-messages
+    flex: 1
+  .chat-input
+    margin-bottom: $space
+   
