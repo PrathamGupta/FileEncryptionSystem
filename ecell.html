@@ -1,0 +1,977 @@
+{% load static %}
+<html>
+<head>
+<title>Ecell IIITD</title>
+<meta name="description" content="Ecell-IIIT Delhi">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href='node_modules/simplelightbox/dist/simplelightbox.min.css' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src='{% static "js/main.js" %}'></script>
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+</head>
+<style>
+html{
+	scroll-behavior: smooth;
+}
+.header{
+	min-height: 700px;
+	background:#74b9ff url("{% static 'ecell-logo.png' %}");
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;    
+}
+
+.parallax {
+	background-attachment: fixed
+}
+
+body{
+	padding:0px;
+	margin:0px;
+	overflow-x: hidden;
+	width:100%;
+}
+.header h1{
+	font-size:62px;
+	font-weight: 700;
+	font-family: 'Roboto Slab';
+	color: #302F30;
+	letter-spacing: 0;
+	text-align: center;
+}
+.header p.lead{
+	font-family: Roboto;
+	font-size: 30px;
+	color: #302F30;
+	letter-spacing: 0;
+	text-align: center;
+}
+.header .date{
+	font-family: Roboto;
+	font-weight: 700;
+	font-size: 26px;
+	color: #302F30;
+	letter-spacing: 0;
+	text-align: center;
+}
+.header button{
+	font-family: Roboto;
+	font-weight: 700;
+	font-size: 14px;
+	padding:10px 30px;
+	color: #FFFFFF;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	/*color: #F74C39;*/
+	letter-spacing: 0;
+	text-align: center;
+	background: #1e90ff;
+	/*background: #F74C39;*/
+	border-radius: 6px;
+	border:0px;
+	outline: 0px;
+}
+
+.header button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.header button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.header button:hover span {
+  padding-right: 25px;
+}
+
+.header button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+@media (min-width: 576px) {
+	section.f{
+		height: 2000px;
+	}
+}
+@media (min-width: 768px) {
+	section.f{
+		height: 500px;
+	}
+	
+}
+@media (min-width: 992px) {
+	section.f{
+		height: 500px;
+	}
+
+}
+@media (min-width: 1200px){
+	section.f{
+		height: 500px;
+	}
+}
+
+section div.f{
+	color:#fff;
+}
+section.f{
+	text-align: center;	
+	font-family: kohinoor;
+}
+section.f div{
+	min-height: 500px;
+	padding:20px 30px;
+	position: relative;
+}
+section.f div p{
+	margin-top:20px;
+	font-size:20px;
+}
+section.f div div img{
+	max-width: 200px;
+}
+section.f div div.img-container{
+	width:100%;
+	position: absolute;
+	top: 222px;
+	left: 0px;
+	text-align: center;
+}
+figure {
+    display: inline-block;
+    width: 20%;
+}
+@font-face {
+    font-family: 'kohinoor';
+    src: url('{% static "fonts/kohinoor-book-webfont.eot" %}');
+    src: url('{% static "fonts/kohinoor-book-webfont.eot?#iefix" %}') format('embedded-opentype'),
+    url('{% static "fonts/kohinoor-book-webfont.woff" %}') format('woff'),
+    url('{% static "fonts/kohinoor-book-webfont.svg#kohinoor_bookregular" %}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.bottom-center-button {
+  position: relative;
+  display: block;
+}
+
+.bottom-center {
+  text-align: center;
+  vertical-align: bottom;
+}
+
+#colorstrip{
+    width: 100%; height: 8px;
+    border-style: solid;
+    border-color: #1e90ff;
+    background-color: #1e90ff;
+}
+
+#colorstrip-ext{
+    width: 100%; height: 8px;
+    border-style: solid;
+    border-color: #fa983a;
+    background-color: #fa983a;
+}
+
+</style>
+
+<body>
+	<div id="colorstrip" class="d-none"></div>
+	<div id="colorstrip-ext" class="d-none"></div>
+	<section class="header parallax" id="home">
+		<header>
+			<nav class="cd-stretchy-nav" id="navbar">
+				<a class="cd-nav-trigger" href="#0" style="background:#1e90ff !important;">
+					<span aria-hidden="true"></span>
+				</a>
+
+				<ul style="background:#1e90ff; border-radius: 32px;">
+					<li class="menu-item"><a href="#home" class="active"><span>Home</span></a></li>
+					<li class="menu-item"><a href="#about"><span>About</span></a></li>
+					<!-- <li class="menu-item"><a href="#schedule"><span>Schedule</span></a></li> -->
+					<li class="menu-item"><a href="#events"><span>Events</span></a></li>
+					<li class="menu-item"><a href="#gallery"><span>Gallery</span></a></li>
+					<li class="menu-item"><a href="#contact"><span>Contact</span></a></li>
+					<!-- <li class="menu-item"><a href="archive/2018/index.html">Visit Summer School 2018</a></li>
+					<li class="menu-item"><a href="https://drive.google.com/open?id=0B8LGHrEPRIxdMGl6amwxd21Kc0U">Download Report (2017)</a></li>
+					<li class="menu-item"><a href="https://drive.google.com/file/d/0B8LGHrEPRIxdYlBkVVdUNUlIUWs/view">Download Report (2016)</a></li>
+					<li class="menu-item"><a href="https://bhaveywadhwa.wordpress.com/2019/06/16/summer-camp-2019/">Blog by a volunteer</a></li> -->
+				</ul>
+
+				<span aria-hidden="true" class="stretchy-nav-bg"></span>
+			</nav>
+			<a href="https://docs.google.com/forms/d/1AnC34sPQerkcRRicMiYGccbyd2iWefuZmVxdrqvmMUE/edit?ts=5d697ecc"><button class="cd-stretchy-button" id="navbar-button"><span>Register Now <br> For PitchCafe2.0</span></button></a>
+		</header>
+	</section>
+
+	<style>
+	section.about{
+		text-align: center;
+		padding-bottom:60px;	
+	}
+	h2.title{
+		font-family: Roboto Slab;
+		font-weight: 700;
+		font-size: 45px;
+		color: #1e90ff;
+		letter-spacing: 0;
+		text-align: center;
+		/* padding:60px 0px; */
+	}
+	section.about p{
+		font-family: Overpass;
+		font-size: 16px;
+		color: #222;
+		letter-spacing: 0.3px;
+		text-align: justify;
+		line-height: 26px;
+	}
+	</style>
+		<section class="about" id="about">
+			<div class="container">
+				<h2 class="title p-md-5 p-3">About</h2>
+					<div class="row p-3">
+						<p>
+							Nowadays people are afraid to take risks. Entreprenuership is one of those. Its elemental definition is "owing a business
+							with some risks in order to make profit". We at E-Cell of IIIT Delhi have those hormones in our andrenals to take those 
+							risks and also have intent to cultivate those in others with some groundbreaking ideas that could possibly change the
+							perception of the society towards Entreprenuership. Our vision is to enrich the Indian youth with proper Entp skills
+							through many enlighting workshops, etalks, startup showcases and self-assertive or ambitious yet productive and healthy
+							competitions.
+						</p>
+					</div>
+			</div>
+			<div class="container d-none">
+				<div class="col-md-6" style="padding-top: 50px;">
+					<p style="text-align: center; font-family: Roboto Slab; font-weight: bold;">Summer Camp 2016</p>
+					<div class="embed-responsive embed-responsive-16by9">
+						<!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/c-O6l8aiIFY" frameborder="0" allowfullscreen=""></iframe> -->
+						<iframe src="https://www.youtube.com/embed/w1LBhwSQ-GI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameborder="0" allowfullscreen ></iframe>
+					</div>
+					<!-- <video width="320" height="240" controls>
+						<source src="videos/movie.mp4" type="video/mp4">
+						<source src="videos/movie.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video> -->
+				</div>
+				<div class="col-md-6" style="padding-top: 50px;">
+					<!-- <video width="320" height="240" controls>
+						<source src="videos/movie.mp4" type="video/mp4">
+						<source src="videos/movie.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video> -->
+					<p style="text-align: center; font-family: Roboto Slab; font-weight: bold;">Summer Camp 2017</p>
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe src="https://www.youtube.com/embed/M0Rdpkgllbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameborder="0" allowfullscreen></iframe>
+						<!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/c-O6l8aiIFY" frameborder="0" allowfullscreen=""></iframe> -->
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="f" id="events">
+		<h2 class="title p-md-5 p-3">Events</h2>
+
+		<div class="col-md-3 f" style="background: #002942">
+			<h2>INCEPTION <br> Ideathon</h2>
+			<p>12 hours to prepare a pitch and get investment from us. The top 5 tems get to present infront of judges. Top team gets a chance to incubate</p>
+			<div class="img-container">
+			<img src="{% static 'icons/icon1.png' %}" width="500px">
+			</div>
+		</div>
+		<div class="col-md-3 f" style="background: #ef5160">
+			<h2>PITCHCAFE</h2>
+			<p>Pitching Event for Startups <br> <a href="http://ecell.iiitd.edu.in/PitchCafe2.0">Know More</a> </p>
+			<div class="img-container">
+			<img src="{% static 'icons/icon2.png' %}">
+			</div>
+		</div>
+		<div class="col-md-3 f" style="background: #eac038">
+			<h2>Sell Any Thing</h2>
+			<p>How will you sell a pen without ink in it or probably a condom with a hole in it. 
+					Can you master your pitch to sell the most unsellable thing?</p>
+			<div class="img-container">
+			<img src="{% static 'icons/icon3.png' %}">
+			</div>
+		</div>
+		<div class="col-md-3" style="background: #4a69bd">
+			<h2>End Of Year Sale</h2>
+			<p>You get a chance to host a bid for it. Or maybe a stall to sell your items off. </p>
+			<div class="img-container">
+			<img src="{% static 'icons/icon4.png' %}">
+			</div>
+		</div>
+	</section>
+
+	<style>
+	.schedule h2{
+
+	}
+	.schedule{
+		text-align: center;
+	}
+	.photos{
+		/*margin-bottom:100px;*/
+		/*padding-top: 200px;*/
+		padding-bottom: 100px;
+	}
+	.photos .my-slider{
+		text-align: center;
+	}
+	.photos .my-slider ul li{
+		text-align:center;
+	}
+	.photos .my-slider ul li img{
+		margin:auto;
+		height: 500px;
+		border-radius: 10px;
+	}
+	.unslider-arrow.next{
+		margin-top:-300px;
+		content:url(next.png);
+	}
+	.unslider-arrow.prev{
+		margin-top:-300px;
+		content:url(previous.png);
+	}
+	.unslider-arrow.prev{
+		left:300px!important;
+	}
+	.unslider-arrow.next{
+		right:300px!important;
+	}
+	div.wrapper {
+	  width: calc(100%-10px);
+	  overflow: auto;
+	}
+	table{
+		font-family: Roboto Slab;
+	}
+	table td{
+		padding:15px!important;
+		text-align: center;
+		vertical-align: center;
+	}
+	.table-curved {
+	   border-collapse: separate;
+	   border: solid #ccc 1px;
+	   border-radius: 15px 50px;
+	   border-left: 0px;
+	   border-top: 0px;
+	}
+	.table-curved > thead:first-child > tr:first-child > th {
+	    border-bottom: 0px;
+	    border-top: solid #ccc 1px;
+	}
+	.table-curved td, .table-curved th {
+	    border-left: 1px solid #ccc;
+	    border-top: 1px solid #ccc;
+	}
+	.table-curved > :first-child > :first-child > :first-child {
+	    border-radius: 15px 0 0 0;
+	}
+	.table-curved > :first-child > :first-child > :last-child {
+	    border-radius: 0 50px 0 0;
+	}
+	.table-curved > :last-child > :last-child > :first-child {
+	    border-radius: 0 0 0 50px;
+	}
+	.table-curved > :last-child > :last-child > :last-child {
+	    border-radius: 0 0 15px 0;
+	}
+	table th{
+		text-align: center;
+		vertical-align: middle;
+		/*color: #ff5733;*/
+	}
+/*	table tr{
+		background-color: #fa983a;
+	}*/
+	</style>
+	<section class="schedule d-none" id="schedule" style="margin-bottom: 50px;">
+		<h2 class="title">Schedule</h2>
+		<div class="container">
+		<div class="wrapper">
+		<table class="table table-curved table-bordered table-stripped">
+		  <thead>
+		    <tr>
+		      <th>Day</th>
+		      <th>9AM - 9.30AM</th>
+		      <th>Session 1<br>(9.30AM - 11.30AM)<br>Session Theme</th>
+		    <th>11.30AM -12PM</th>
+		      <th>Session 2<br>(12PM - 1PM)<br>Session Theme</th>
+		    
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>Monday</td>
+		      <td rowspan=5 style="width:20%;vertical-align: middle;">Morning Sessions</td>
+		      <td>Problem solving and Maths</td>
+		      <td>Lunch</td>
+		      <td>Theatre</td>
+		    </tr>
+		    <tr>
+		      <td>Tuesday</td>
+		      <td>Hands on Science</td>
+		      <td>Lunch</td>
+		      <td>Sports</td>
+		    </tr>
+		    <tr>
+		      <td>Wednesday</td>
+		      <td>Personality Development and Communication Skills </td>
+		      <td>Lunch</td>
+		      <td>Art and Craft</td>
+		    </tr>
+		    <tr>
+		      <td>Thursday</td>
+		      <td>Computer Science</td>
+		      <td>Lunch</td>
+		      <td>Music/Dance</td>
+		 
+		    </tr>
+		    <tr>
+		      <td>Friday</td>
+		      <td>General Knowledge</td>
+		      <td>Lunch</td>
+		      <td>Career Counselling </td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+	</div>
+	</section>
+
+	<style>
+		.mySlides {display:none}
+		.w3-left, .w3-right, .w3-badge {cursor:pointer}
+		.w3-badge {height:13px;width:13px;padding:0}
+	</style>
+
+	<section class="photos pb-5" id="gallery" style=" margin-top: -30px;">
+		<div class="w3-container mt-5">
+			<h2 class="title p-5">Gallery</h2>
+		</div>
+
+		<div class="w3-content w3-display-container" style="max-width:800px;">
+			<img class="mySlides w3-animate-right" src="{% static 'img/gallery/0002.jpg' %}" style="width:100%">
+			<img class="mySlides w3-animate-right" src="{% static 'img/gallery/0001.jpg' %}"  style="width:100%">
+			<!-- <img class="mySlides w3-animate-right" src="{% static 'img/gallery/0003.jpg' %}"  style="width:100%">
+			<img class="mySlides w3-animate-right" src="{% static 'img/gallery/0004.jpg' %}"  style="width:100%">
+			<img class="mySlides w3-animate-right" src="{% static 'img/gallery/0005.jpg' %}"  style="width:100%">
+			<img class="mySlides w3-animate-right" src="{% static 'img/gallery/0006.jpg' %}"  style="width:100%">
+			<img class="mySlides w3-animate-right" src="{% static 'img/gallery/0007.jpg' %}"  style="width:100%"> -->
+			<!-- <img class="mySlides w3-animate-right" src="{% static 'img/gallery/0008.jpg' %}"  style="width:100%"> -->
+			<!-- <img class="mySlides w3-animate-right" src="{% static 'img/gallery/0009.jpg' %}"  style="width:100%"> -->
+			<!-- add more -->
+
+			<div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+				<div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+				<div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+				
+				<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+				<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+				<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+				<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
+				<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(5)"></span>
+				<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(6)"></span>
+				<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(7)"></span>
+				<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(8)"></span>
+				<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(9)"></span>
+			</div>
+		</div>
+	</section>
+
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/unslider/2.0.3/css/unslider-dots.css"  />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/unslider/2.0.3/css/unslider.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/unslider/2.0.3/js/unslider-min.js"></script>
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('.ss-slider').unslider({
+		autoplay: true,
+		arrows: false
+		});
+		$('.my-slider').unslider({
+			autoplay: false,
+			arrows: true
+		});
+	});
+	</script>
+
+
+
+	<style>
+		.mabout{
+			min-height: 300px;
+		}
+		.mabout .card-2{
+				border-radius: 6px;
+			    margin: 50px;
+			    padding: 10px 20px;
+			    background: rgba(255,255,255,0.8);
+			    font-family: kohinoor;
+			    font-weight: 500;
+				font-size: 18px;
+				/*color: #8F2945;*/
+				color: #302F30;
+				box-shadow: 10px 10px rgba(0,0,0,0.4);
+				letter-spacing: 0;
+
+		}
+		.mabout .card{
+				border-radius: 6px;
+			    margin: 50px;
+			    padding: 10px 20px;
+			    font-family: kohinoor;
+			    font-weight: 500;
+				font-size: 18px;
+				color: #302F30;
+				letter-spacing: 0;
+
+		}
+		.row2{
+		    overflow: hidden; 
+		}
+
+		[class*="col2-"]{
+		    margin-bottom: -99999px;
+		    padding-bottom: 99999px;
+		}
+		.mabout .col-md-6{
+			height: 400px;
+		}
+		.primary-color{
+			color: #1e90ff;
+		}
+	</style>
+
+	<section class="mabout d-none">
+		<div class="row row2">
+			<div class="col-md-6 col2" style="background: #FFFFFF;height:500px">
+				<div class="card">
+				<h2 class="primary-color">Participating Schools</h2>
+				<ul>
+					<li>RPVV - Class 8th, Lajpat Nagar</li>
+					<li>School of Excellence, Kalkaji</li>
+					<li>Govt. Girls Senior Secondary School, DDA Kalkaji</li>
+					<li>Govt. Boys Senior Secondary School, Kalkaji No. 3</li>
+					<li>Govt. Boys Senior Secondary School, Harkesh Nagar</li>
+				</ul>
+				</div>
+			</div>
+			<div class="col-md-6 col2" style="background: url(v.png);height:500px;background-size: cover;">
+				<div class="card-2">
+				<h2 class="primary-color">Volunteers from IIIT-D</h2>
+				<p> 
+					Summer Camp 2019 is run and organized by a team of students from IIIT-Delhi. The team comprises of 4 coordinators and 30+ volunteers from B.Tech batches. The coordinators and volunteers are further guided by IIIT-D Faculty and Staff. The coordinators are actively involved in building curriculum, training the volunteers, managing summer camp activities and motivating volunteers to teach and manage the kids effectively. A set of volunteers are made responsible for daily sessions and take care of the students around the campus.
+				</p>
+			</div>
+			</div>
+		</div>
+	</section>
+
+<style>
+	div.ss-slider ul li{
+		font-family: kohinoor;
+		font-size:20px;
+		color:#fff;
+		/* padding:50px; */
+	}
+	div.ss-slider a.unslider-arrow{
+		display: none!important;
+	}
+	section#gall{
+		/* padding:15px 70px; */
+	}
+</style>
+<style>
+	section.schoolMessage{
+		text-align: center;
+		padding-bottom:60px;
+		background-color: #fad390;
+	}
+	h2.title{
+		font-family: Roboto Slab;
+		font-weight: 700;
+		font-size: 45px;
+		color: #1e90ff;
+		letter-spacing: 0;
+		text-align: center;
+		/* padding:60px 0px; */
+	}
+	section.schoolMessage p{
+		font-family: Overpass;
+		font-size: 16px;
+		color: #222;
+		letter-spacing: 0.3px;
+		text-align: justify;
+		line-height: 26px;
+	}
+	</style>
+	<section class="schoolMessage d-none" id="schoolMessage">
+		<div class="container">
+			<h2 class="title">Message from Schools</h2>
+				<div class="row">					
+					<p>We at RPVV lajpat Nagar had a really eventful year. Our students performed very well at the home exams and we are hoping for great results at the Boards too. You mentored our students and shared your precious time, resources and ideas with them. Your organization helped us realize the vision we had for our school and students.
+					We are really thankful for your support and look forward to greater opportunities of collaboration with you!</p>
+					<p style="float: right;"><b>- Principal, RPVV Lajpat Nagar</b></p>
+				</div>
+		</div>
+	</section>
+
+	<style type="text/css">
+		section.SCinMedia {
+			background-color: #FFFFFF;
+			padding-bottom: 50px;
+		}
+		section.SCinMedia p{
+			font-family: Overpass;
+			font-size: 16px;
+			color: #222;
+			letter-spacing: 0.3px;
+			text-align: justify;
+			line-height: 26px;
+		}
+		.container .gallery a img {
+		  float: left;
+		  width: 20%;
+		  height: auto;
+		  border: 2px solid #fff;
+		  -webkit-transition: -webkit-transform .15s ease;
+		  -moz-transition: -moz-transform .15s ease;
+		  -o-transition: -o-transform .15s ease;
+		  -ms-transition: -ms-transform .15s ease;
+		  transition: transform .15s ease;
+		  position: relative;
+		}
+		/* line 46, ../sass/demo.scss */
+		.container .gallery a:hover img {
+		  -webkit-transform: scale(1.05);
+		  -moz-transform: scale(1.05);
+		  -o-transform: scale(1.05);
+		  -ms-transform: scale(1.05);
+		  transform: scale(1.05);
+		  z-index: 5;
+		}
+		/* line 57, ../sass/demo.scss */
+		.container .gallery a.big img {
+		  width: 40%;
+		}
+	</style>
+	<section class="SCinMedia pb-0" id="SCinMedia">
+		<div class="container d-none">
+			<h2 class="title">Summer Camp in Media</h2>
+			<div class="gallery">
+				<a href="{% static 'img/media/amarujala.jpg' %}" ><img src="{% static 'img/media/amarujala.jpg' %}"  alt="" title="Amar Ujala, 20th May 2019" /></a>
+				<a href="{% static 'img/media/brainfeed.png' %}"><img src="{% static 'img/media/brainfeed.png' %}" alt="" title="Brainfeed Magazine, 18th May 2019"/></a>
+				<a href="{% static 'img/media/city.png' %}"><img src="{% static 'img/media/city.png' %}" alt="" title="City Air News, 18th May 2019"/></a>
+				<a href="{% static 'img/media/edutimes.png' %}"><img src="{% static 'img/media/edutimes.png' %}" alt="" title="Education Times, 17th May 2019"/></a>
+				<a href="{% static 'img/media/toi.jpg' %}" ><img src="{% static 'img/media/toi.jpg' %}"  alt="" title="Times of India, 20th May 2019"/></a>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</section>
+
+	<style>
+		h2{
+			font-family: Roboto Slab;
+		}
+	</style>
+	<section id="gall" class="col-md-12  p-md-5 p-3" style="background: #3fad8d url(&quot;{% static 'img/ss-bg2.jpg' %}&quot;);background-size:cover;">
+		<div class="container" style="text-align: center">
+		<h2 class="py-3">Entrepreneur Quotes</h2>
+			<!-- <p>Student Experiences</p> -->
+			<div class="ss-slider">
+				<ul>
+					<li class="p-3">"Only the paranoid survive." <br> -Andy Grove, former CEO of Intel</li>
+					<li class="p-3">"Don’t let others convince you that the idea is good when your gut tells you it’s bad." <br> -Kevin Rose, co-founded Digg</li>
+					<li class="p-3">"In the age of transparency, honesty, and generosity, even in the form of an apology, generate goodwill."<br> -Alexander Asseily, founder of Jawbone</li>
+					<li class="p-3">"It’s necessary to find a mentor who can invest time to know your personal capabilities and business model."<br> -Nigel Davies, Founder of Claromentis</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<style>
+	footer{
+		font-family: kohinoor;
+	}
+	ul.footer{
+		list-style: none;
+		padding-left:0px;
+	}
+	ul.footer a{
+		color:#fff!important;
+	}
+	ul.footer{
+		font-size: 16px;
+	}
+	section.contact{
+		background: #222;
+		min-height: 300px;
+		width: 100%;
+		font-family: Kohinoor;
+		/*padding:30px;*/
+	}
+	section.contact p, section.contact ul, section.contact h2{
+		color:#fff;
+	}
+	ul.coo{
+		margin-left: 0px;
+		padding-left: 0px;
+		list-style: none;
+
+	}
+	li.coo{
+		font-size: 18px;
+		margin:30px;
+	}
+	li.coo span.coo-contact{
+		font-size:14px;
+	}
+	li a {
+		color: #fff;
+	}
+	li a:hover{
+		color: #fff;
+	}
+	</style>
+
+	<section class="contact" id="contact">
+	<div class="container">
+		<div class="py-md-5 my-md-5"></div>
+		<div class="py-md-5 my-md-5 p-3"></div>
+		<h2 class="title p-md-5 p-3">Contact</h2>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-6">
+						<p>
+							<ul class="coo">
+								<li class="coo">Yash Gupta
+									<span class="coo-contact">
+										<br><a href="mailto:yash17210@iiitd.ac.in">yash17210@iiitd.ac.in</a>
+										<br>7404343895</span>
+								</li>
+								<li class="coo">Sanchit   
+									<span class="coo-contact">
+										<br><a href="mailto:sanchit17312@iiitd.ac.in">Sanchit17312@iiitd.ac.in</a>
+										<br>9810725811</span>
+								</li>
+							</ul>
+						</p>
+					</div>
+					<div class="col-md-6 d-none">
+						<p>
+							<ul class="coo">
+								<li class="coo">Divyanshu Kumar Singh   
+									<span class="coo-contact">
+										<br><a href="mailto:divyanshu17048@iiitd.ac.in">divyanshu17048@iiitd.ac.in</a>
+										<br>9911872774</span>
+								</li>
+
+								<li class="coo">Sarthak Goyal
+									<span class="coo-contact">
+										<br><a href="mailto:sarthak16190@iiitd.ac.in">sarthak16190@iiitd.ac.in</a>
+										<br>8826389868</span>
+								</li>
+								
+							</ul>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 p-md-3 p-0">
+				<div class="mapouter"><div class="gmap_canvas"><iframe width="550" height="450" id="gmap_canvas" src="https://maps.google.com/maps?q=Indraprastha%20Institute%20of%20information%20Technology&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.crocothemes.net">crocothemes</a></div><style>.mapouter{position:relative;text-align:right;height:450px;width:550px;}.gmap_canvas {overflow:hidden;background:none!important;height:450px;width:550px;}</style></div>
+			</div>
+		</div>
+	</div>
+	</section>
+
+	<footer style="width:100%;min-height: 300px;background: #000;color:#fff;padding-top:50px;">
+		<div class="container">
+			<!-- <div class="col-md-4"> -->
+				<!-- <h3>More Links</h3>
+				<ul class="footer">
+					<li><a href="http://iiitd.ac.in/">IIIT-Delhi</a></li>
+				</ul -->
+			<!-- </div> -->
+			<!-- <div class="col-md-4">
+				<h3>Previous Editions:</h3>
+				<ul class="footer">
+					<li><a href="archive/2018/index.html">2018</a></li>
+					<li><a href="archive/2017/index.html">2017</a></li>
+				</ul>
+			</div> -->
+			<div class="row">
+				<div class="col-md col-12">
+					<a href="https://iiitd.ac.in"><img src="{% static 'img/iiitd-white-logo.png' %}" style=" height: 200px;"></a>	
+				</div>
+				<div class="col-md col-12">
+					<a href="http://iic.iiitd.ac.in/"><img src="{% static 'logo/iic-logo.png' %}" style="height: 200px;"></a>		
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
+	<script type="text/javascript" src="{% static 'node_modules/simplelightbox/dist/simple-lightbox.js' %}"></script>
+
+	<script>
+		$(function(){
+			var $gallery = $('.gallery a').simpleLightbox();
+
+			$gallery.on('show.simplelightbox', function(){
+				console.log('Requested for showing');
+			})
+			.on('shown.simplelightbox', function(){
+				console.log('Shown');
+			})
+			.on('close.simplelightbox', function(){
+				console.log('Requested for closing');
+			})
+			.on('closed.simplelightbox', function(){
+				console.log('Closed');
+			})
+			.on('change.simplelightbox', function(){
+				console.log('Requested for change');
+			})
+			.on('next.simplelightbox', function(){
+				console.log('Requested for next');
+			})
+			.on('prev.simplelightbox', function(){
+				console.log('Requested for prev');
+			})
+			.on('nextImageLoaded.simplelightbox', function(){
+				console.log('Next image loaded');
+			})
+			.on('prevImageLoaded.simplelightbox', function(){
+				console.log('Prev image loaded');
+			})
+			.on('changed.simplelightbox', function(){
+				console.log('Image changed');
+			})
+			.on('nextDone.simplelightbox', function(){
+				console.log('Image changed to next');
+			})
+			.on('prevDone.simplelightbox', function(){
+				console.log('Image changed to prev');
+			})
+			.on('error.simplelightbox', function(e){
+				console.log('No image found, go to the next/prev');
+				console.log(e);
+			});
+		});
+	</script>
+
+
+	<script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n) {
+			showDivs(slideIndex += n);
+		}
+
+		function currentDiv(n) {
+			showDivs(slideIndex = n);
+		}
+
+		function showDivs(n) {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("demo");
+			if (n > x.length) {slideIndex = 1}
+			if (n < 1) {slideIndex = x.length}
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" w3-white", "");
+			}
+			x[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " w3-white";
+		}
+	</script>
+	<script type="text/javascript">
+		var prevScrollpos = window.pageYOffset;
+		window.onscroll = function() {
+		var currentScrollPos = window.pageYOffset;
+		  if (prevScrollpos > currentScrollPos) {
+		    document.getElementById("navbar").style.top = "40";
+		    document.getElementById("navbar-button").style.top = "40";
+		  } else {
+		    document.getElementById("navbar").style.top = "-100px";
+		    document.getElementById("navbar-button").style.top = "-100";
+		  }
+		  prevScrollpos = currentScrollPos;
+		}
+	</script>
+
+	<script>
+		// Open the Modal
+		function openModal() {
+		  document.getElementById("myModal").style.display = "block";
+		}
+
+		// Close the Modal
+		function closeModal() {
+		  document.getElementById("myModal").style.display = "none";
+		}
+
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		// Next/previous controls
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		// Thumbnail image controls
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("demo");
+		  var captionText = document.getElementById("caption");
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		    slides[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		    dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " active";
+		  captionText.innerHTML = dots[slideIndex-1].alt;
+		}
+		</script>
+
+</body>
+</html>
