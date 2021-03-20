@@ -13,7 +13,7 @@ gevent-socketio==0.3.6
 gevent-websocket==0.9.5
 greenlet==0.4.7
 itsdangerous==0.24
-Jinja2==2.7.3
+Jinja2==2.11.3
 jmespath==0.7.1
 MarkupSafe==0.23
 pathspec==0.3.3
