@@ -25,4 +25,4 @@ texttable==0.8.3
 uWSGI==2.0.10
 websocket-client==0.32.0
 Werkzeug==0.10.4
-wheel==0.24.0
+wheel==0.38.1
